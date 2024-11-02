@@ -1,0 +1,158 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eef6fc; 
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: #4a90e2;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+#search {
+    padding: 10px;
+    width: 300px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 4px solid #7bd3ff;
+    transition: border-color 0.3s;
+}
+
+#search:focus {
+    border-color: #1e88e5; 
+    outline: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#country-container {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px;
+}
+
+.country-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient(to bottom right, #ffcc00, #ff6699); 
+    transition: box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0px 0px 10px;
+    margin-bottom: 20px; 
+}
+
+.country-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.country-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; 
+}
+
+button, #favorites-link {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover, #favorites-link:hover {
+    background-color: #0056b3; 
+    transform: translateY(-2px);
+}
+
+#show-more {
+    background-color: #28a745; 
+}
+
+#show-more:hover {
+    background-color: #218838; 
+}
+
+#back-button {
+    background-color: #dc3545; 
+}
+
+#back-button:hover {
+    background-color: #c82333; 
+}
+
+.details {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.details img {
+    width: 200px;
+}
+
+.details button {
+    background-color: #4a90e2; 
+}
+
+.details button:hover {
+    background-color: #357ab8; 
+}
+
+#favorites-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#favorites-list {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px;
+}
+
+@media (max-width: 900px) {
+    #country-container, #favorites-list {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 600px) {
+    #search {
+        width: 100%;
+    }
+
+    #country-container, #favorites-list {
+        grid-template-columns: 1fr; 
+    }
+}
